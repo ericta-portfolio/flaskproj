@@ -1,8 +1,10 @@
 from flask import Flask
 from flask import request
 from flask import jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 users = {
    'users_list' :
@@ -16,11 +18,6 @@ users = {
          'id' : 'abc123',
          'name': 'Mac',
          'job': 'Bouncer',
-      },
-      {
-         'id' : 'ppp222',
-         'name': 'Mac',
-         'job': 'Professor',
       },
       {
          'id' : 'yat999',
